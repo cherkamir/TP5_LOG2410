@@ -14,13 +14,13 @@ public:
 		return instance_;
 	}
 
-	bool analyseDePerformance()
+	bool programmeAnalyse()
 	{
 		cout << "L'analyse est en cours... \nAnalyse terminee." << endl;
 		return true;
 	}
 
-	const Analyse* verficiationSingleton()
+	const Analyse* adresseSingleton()
 	{
 		return instance_;
 	}

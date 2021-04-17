@@ -10,12 +10,12 @@ public:
 
 	bool AnalyserPerformance()
 	{
-		return Analyse::getInstance()->analyseDePerformance();
+		return Analyse::getInstance()->programmeAnalyse();
 	}
 
 	const Analyse* verifierSigleton()
 	{
-		return Analyse::getInstance()->verficiationSingleton();
+		return Analyse::getInstance()->adresseSingleton();
 	}
 
 private:
