@@ -9,6 +9,13 @@
 #include <memory>
 
 class Application;
+
+/**
+ * The base State class declares methods that all Concrete State should
+ * implement and also provides a backreference to the Context object, associated
+ * with the State. This backreference can be used by States to transition the
+ * Context to another State.
+ */
 class Etat
 {
 public:
@@ -18,13 +25,13 @@ public:
 	}
 
 	void setContexte(Application *app) {
-		appli_ = app;
+		app_ = app;
 	}
 
 	virtual void action1() = 0;
 	virtual void action2() = 0;
 protected:
-	Application *appli_;
+	Application *app_;
 };
 
 
