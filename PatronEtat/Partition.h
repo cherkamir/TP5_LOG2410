@@ -8,6 +8,7 @@
 #include "Application.h"
 
 
+class Analyse;
 class Partition: public Etat
 {
 public:

@@ -13,8 +13,8 @@
 class Application
 {
 public:
-	explicit Application() : etat_(nullptr) {
-		this->transitionVers(etat_);
+	explicit Application(Etat *etat) : etat_(nullptr) {
+		this->transitionVers(etat);
 	}
 	 
 	~Application() { delete etat_; }
