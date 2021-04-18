@@ -34,7 +34,7 @@ public:
     std::string action2() override
     {
 
-        std::string message = "L'analyse est terminé\n Vous avez selectionné : << Charger une nouvelle partition >>.\n L'application va entrer en mode Partition.\n";
+        std::string message = "L'analyse est terminee\n Vous avez selectionne : << Charger une nouvelle partition >>.\n L'application va entrer en mode Partition.\n";
         this->app_->transitionVers(new Partition);
         return message;
     }
@@ -53,7 +53,7 @@ public:
 std::string Partition::action1() {
     
      this->app_->transitionVers(new Analyse);
-     return "Vous avez sélectionné << Analyser la partition musicale et ses note>> . Veuillez patienter...\t\n";
+     return "Vous avez selectionne << Analyser la partition musicale et ses note>> . Veuillez patienter...\t\n";
 
 }
 #endif
