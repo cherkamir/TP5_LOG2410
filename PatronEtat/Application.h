@@ -6,9 +6,8 @@
 #include "Etat.h"
 
 /**
- * The Context defines the interface of interest to clients. It also maintains a
- * reference to an instance of a State subclass, which represents the current
- * state of the Context.
+ * L'application définit l'Interface d'intérêt de l'utilisateur. Elle maintient éaglement
+ * une référence à une instance d'un objet État qui représente l'état actuel de l'application
  */
 class Application
 {
@@ -19,7 +18,7 @@ public:
 	 
 	~Application() { delete etat_; }
 	/**
-	* The Context allows changing the State object at runtime.
+	* L'application nous permet de changer l'objet état à l'exécution
 	*/
 	void transitionVers(Etat *etat) { 
 
@@ -33,7 +32,7 @@ public:
 	}
 
 	/**
-	* The Context delegates part of its behavior to the current State object.
+	* L'application délègue une partie de son comportement à son état actuel
 	*/
 	void analyserperformance()
 	{

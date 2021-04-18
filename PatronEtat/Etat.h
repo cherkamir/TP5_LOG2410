@@ -11,10 +11,10 @@
 class Application;
 
 /**
- * The base State class declares methods that all Concrete State should
- * implement and also provides a backreference to the Context object, associated
- * with the State. This backreference can be used by States to transition the
- * Context to another State.
+ * La classe de base Etat déclare des méthodes virtuelles pures que toutes 
+ * ses classes dérivées doivent implémenter et procure aussi une backreference
+ * vers l'objet Application. Cette backreference peut être utilisée par les différents
+ * états pour transitionner de l'état courant de l'application vers un autre état 
  */
 class Etat
 {
