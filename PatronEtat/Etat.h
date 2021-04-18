@@ -19,7 +19,7 @@ class Application;
 class Etat
 {
 public:
-	Etat() = default;
+	explicit Etat() : app_(nullptr) {}
 	virtual ~Etat() {
 
 	}

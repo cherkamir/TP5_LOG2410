@@ -17,6 +17,7 @@ public:
 		this->transitionVers(etat_);
 	}
 	 
+	~Application() { delete etat_; }
 	/**
 	* The Context allows changing the State object at runtime.
 	*/
@@ -31,11 +32,11 @@ public:
 	/**
 	* The Context delegates part of its behavior to the current State object.
 	*/
-	void Requete1()
+	void analyserperformance()
 	{
 		this->etat_->action1();
 	}
-	void Requete2()
+	void scannerPartition()
 	{
 		this->etat_->action2();
 	}
