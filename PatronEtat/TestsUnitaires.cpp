@@ -52,6 +52,7 @@ TEST_CASE("L'action2 de l'état Partition exécute bien le scan de la partition pr
 TEST_CASE("L'exécution de l'action2 par l'Analyse change l'état courant en Partition")
 {
     Application *app = new Application(new Partition);
+    cout << "Entrez a\n";
     Etat& typeEtatCourant = Client();
     REQUIRE(typeid(typeEtatCourant).name() == typeid(Partition).name());
 }
@@ -59,6 +60,7 @@ TEST_CASE("L'exécution de l'action2 par l'Analyse change l'état courant en Parti
 TEST_CASE("L'exécution de l'action1 par Partition change l'état courant en Analyse")
 {
     Application* app = new Application(new Analyse);
+    cout << "Entrez b\n";
     Etat& typeEtatCourant = Client();
     REQUIRE(typeid(typeEtatCourant).name() == typeid(Analyse).name());
 }

@@ -53,7 +53,7 @@ public:
 std::string Partition::action1() {
     
      this->app_->transitionVers(new Analyse);
-     return "Vous avez selectionne << Analyser la partition musicale et ses note>> . Veuillez patienter...\t\n";
+     return "Vous avez selectionne << Analyser la partition musicale et ses note>> . Veuillez patienter...\t\n L'application va rentrer en mode Analyse\n";
 
 }
 #endif
