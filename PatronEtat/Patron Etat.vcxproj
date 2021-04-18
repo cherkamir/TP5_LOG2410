@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnalyseEtPartition.h" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="TestsUnitaires.cpp" />
   </ItemGroup>
   <ItemGroup>

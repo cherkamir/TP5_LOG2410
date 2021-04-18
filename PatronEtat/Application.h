@@ -22,7 +22,7 @@ public:
 	*/
 	void transitionVers(Etat *etat) { 
 
-		std::cout << "Application: Transition vers " /*<< typeid(*etat_).name()*/ << ".\n";
+		
 		if (etat_ != nullptr)
 			delete etat_;
 		etat_ = etat;
@@ -35,16 +35,21 @@ public:
 	* L'application délègue une partie de son comportement à son état actuel
 	*/
 
-
-	void Requete1()
+	// Requete1 de l'utilisateur qui est censé lancer l'analyse de performance
+	std::string Requete1()
 	{
-		this->etat_->action1();
+		return this->etat_->action1();
 	}
-	void Requete2()
+	// Requete2 de l'utilisateur qui est censé lancer le chargement d'une partition
+	std::string  Requete2()
 	{
-		this->etat_->action2();
+		return this->etat_->action2();
 	}
 
+	// Retourne l'état actuel de l'application
+	Etat& getEtat() const {
+		return *etat_;
+	}
 private:
 	Etat *etat_;
 };
