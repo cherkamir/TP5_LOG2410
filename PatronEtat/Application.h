@@ -34,11 +34,13 @@ public:
 	/**
 	* L'application délègue une partie de son comportement à son état actuel
 	*/
-	void analyserperformance()
+
+
+	void Requete1()
 	{
 		this->etat_->action1();
 	}
-	void scannerPartition()
+	void Requete2()
 	{
 		this->etat_->action2();
 	}

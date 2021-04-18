@@ -14,12 +14,13 @@
 class Partition : public Etat
 {
 public:
-    inline void action1() override;
+    inline std::string action1() override;
 
-    void action2() override
+    // Scan de la partition musicale et retour d'une string indiquant que le scan est en cours
+    std::string action2() override
     {
 
-        std::cout << "Le systeme va maintenant scanner la partition musicale prise en photo. Veuillez patienter... \t" << std::endl;
+        return "Le systeme va maintenant scanner la partition musicale prise en photo. Veuillez patienter... \t\n";
 
     }
 };
@@ -28,26 +29,31 @@ public:
 class Analyse : public Etat
 {
 public:
-    void action2() override
+    // L'analye de l'action1 est terminé, maintenant on veut charger une vouvelle partition
+    // l'état courant chhange de Analyse à Partition
+    std::string action2() override
     {
 
-        std::cout << "L'analyse est terminé\n Vous avez selectionné : << Charger une nouvelle partition >>.\n L'application va entrer en mode Partition.\n";
+        std::string message = "L'analyse est terminé\n Vous avez selectionné : << Charger une nouvelle partition >>.\n L'application va entrer en mode Partition.\n";
         this->app_->transitionVers(new Partition);
+        return message;
     }
 
-    void action1() override
+    // L'action s'occupe d'analyse la bande sonore d'une performance et retourne une string confirmant qu'elle a lieu
+    std::string action1() override
     {
 
-        std::cout << "L'analyse de la bande sonore de votre performance est en cours. Veuillez patienter...\t" << std::endl;
-        std::cout << "L'analyse est terminé\n Vous avez selectionné : << Charger une nouvelle partition >>.\n L'application va entrer en mode Partition.\n";
-        this->app_->transitionVers(new Partition);
+        return "L'analyse de la bande sonore de votre performance est en cours. Veuillez patienter...\t\n";
     }
 };
 
-void Partition::action1() {
+/// @brief Transfert de responsabilité de la Partition vers l'Analyse après que l'on ai choisi d'en conduire
+//         une de la partition musicale
+/// @return string 
+std::string Partition::action1() {
     
      this->app_->transitionVers(new Analyse);
-     std::cout << "Vous avez sélectionné << Analyser la partition musicale et ses note>> . Veuillez patienter...\t" << std::endl;
+     return "Vous avez sélectionné << Analyser la partition musicale et ses note>> . Veuillez patienter...\t\n";
 
 }
 #endif

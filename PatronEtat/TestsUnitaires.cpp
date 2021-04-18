@@ -10,8 +10,13 @@ using namespace std;
 void Client()
 {
     Application* app = new Application(new Analyse);
-    app->analyserperformance();
-    app->scannerPartition();
+    app->Requete1();
+    app->Requete2();
     delete app;
 }
 
+
+TEST_CASE("La Requete1 exécute bien l'analyse de la performance")
+{
+
+}

@@ -16,20 +16,20 @@ class Application;
  * vers l'objet Application. Cette backreference peut être utilisée par les différents
  * états pour transitionner de l'état courant de l'application vers un autre état 
  */
+
 class Etat
 {
 public:
 	explicit Etat() : app_(nullptr) {}
-	virtual ~Etat() {
-
-	}
+	virtual ~Etat() {}
 
 	void setContexte(Application *app) {
 		app_ = app;
 	}
 
-	virtual void action1() = 0;
-	virtual void action2() = 0;
+	virtual std::string action1() = 0;
+
+	virtual std::string action2() = 0;
 protected:
 	Application *app_;
 };
