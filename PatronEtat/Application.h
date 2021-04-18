@@ -22,11 +22,14 @@ public:
 	* The Context allows changing the State object at runtime.
 	*/
 	void transitionVers(Etat *etat) { 
-		std::cout << "Application: Transition vers " << typeid(*etat_).name() << ".\n";
+
+		std::cout << "Application: Transition vers " /*<< typeid(*etat_).name()*/ << ".\n";
 		if (etat_ != nullptr)
 			delete etat_;
 		etat_ = etat;
 		etat_->setContexte(this);
+		
+
 	}
 
 	/**

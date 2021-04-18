@@ -142,11 +142,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Analyse.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="catch.hpp" />
     <ClInclude Include="Etat.h" />
-    <ClInclude Include="Partition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
